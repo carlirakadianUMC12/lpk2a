@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Carli Rakadian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="progress" id="progress"></div>
+
+    <header id="beranda">
+        <!-- Opsional: taruh video animasi Anda di aset/sasuke.mp4 (tanpa file ini, header tetap tampil normal) -->
+        <video class="bg-media" autoplay muted loop playsinline>
+            <source src="aset/sasuke.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <canvas id="petir"></canvas>
+        <div class="foto-wrap">
+            <img src="aset/sasuke.jpg" alt="Foto Profil" class="foto">
+        </div>
+        <h1>Carli Rakadian</h1>
+        <p class="ketik"><span id="ketik"></span><span class="kursor"></span></p>
+        <a href="#kontak" class="tombol">Hubungi saya</a>
+    </header>
+
+    <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#kontak">Kontak</a>
+        <button id="tema" aria-label="Ganti tema terang atau gelap">🌙</button>
+    </nav>
+
+    <main>
+        <section id="tentang" class="reveal">
+            <h2>Tentang</h2>
+            <p>
+                Saya adalah mahasiswa semester 5 yang tertarik
+                pada pengembangan aplikasi multi-platform.
+            </p>
+            <div class="minat">
+                <span>Teknik Informatika UMC</span>
+                <span>Aplikasi multi-platform</span>
+                <span>Calon mantu terbaik mamahmu</span>
+            </div>
+        </section>
+
+        <section id="keahlian" class="reveal">
+            <h2>Keahlian</h2>
+            <div class="cards">
+                <div class="card"><span class="ikon">🌐</span>HTML &amp; CSS</div>
+                <div class="card"><span class="ikon">⚡</span>JavaScript</div>
+                <div class="card"><span class="ikon">☕</span>Java</div>
+                <div class="card"><span class="ikon">📱</span>Kotlin</div>
+            </div>
+        </section>
+
+        <section id="kontak" class="reveal">
+            <h2>Kontak</h2>
+            <ul class="kontak">
+                <li>
+                    <span>Email</span>
+                    <a href="mailto:raka86@gmail.com">raka86@gmail.com</a>
+                </li>
+                <li>
+                    <span>GitHub</span>
+                    <a href="https://github.com/carlirakadianUMC12" target="_blank" rel="noopener">@carlirakadianUMC12</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Carli Rakadian. All rights reserved.</p>
+    </footer>
+
+    <button id="naik" aria-label="Kembali ke atas">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
