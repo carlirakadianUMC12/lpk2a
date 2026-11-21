@@ -1,6 +1,6 @@
 // Efek mengetik
 const teks = [
-  "Mahasiswa Teknik Informatika UMC",
+  "Mahasiswa Teknik Informatika",
   "Calon mantu terbaik mamahmu",
   "Penggemar roblox",
 ];
