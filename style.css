@@ -58,30 +58,55 @@ header {
 .foto-wrap {
   position: relative;
   width: 148px; height: 148px;
-  margin: 0 auto 20px;
+  margin: 12px auto 26px;
   border-radius: 50%;
   padding: 4px;
-  background: conic-gradient(from 0deg, #fff, var(--glow), #fff, var(--glow), #fff);
-  animation: putar 6s linear infinite;
-  box-shadow: 0 0 32px rgba(0, 212, 255, 0.55);
+  background: radial-gradient(circle, #00d4ff 45%, #3b82f6 75%, #6366f1 100%);
+  box-shadow:
+    0 0 24px rgba(0, 212, 255, 0.75),
+    0 0 48px rgba(56, 189, 248, 0.45),
+    0 0 70px rgba(99, 102, 241, 0.35);
 }
 
 .foto-wrap .foto {
+  position: relative;
+  z-index: 2;
   width: 100%; height: 100%;
   border-radius: 50%;
-  border: 4px solid #0b3b78;
+  border: 3px solid #09254d;
   object-fit: cover;
   display: block;
-  animation: putar 6s linear infinite reverse;
+}
+
+.avatar-fx {
+  position: absolute;
+  inset: -46px;
+  width: calc(100% + 92px);
+  height: calc(100% + 92px);
+  z-index: 3;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.fx-spin-cw {
+  transform-origin: 120px 120px;
+  animation: putar 7s linear infinite;
+}
+
+.fx-spin-ccw {
+  transform-origin: 120px 120px;
+  animation: putar 10s linear infinite reverse;
+}
+
+.fx-twinkle {
+  animation: kilau 2.4s ease-in-out infinite alternate;
 }
 
 @keyframes putar { to { transform: rotate(360deg); } }
 
-header h1 {
-  font-size: clamp(2rem, 6vw, 3.2rem);
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  line-height: 1.15;
+@keyframes kilau {
+  0% { opacity: 0.65; transform: scale(0.97); transform-origin: 120px 120px; }
+  100% { opacity: 1; transform: scale(1.03); transform-origin: 120px 120px; }
 }
 
 .ketik { min-height: 1.8em; margin-top: 8px; font-size: 1.05rem; opacity: 0.95; }
